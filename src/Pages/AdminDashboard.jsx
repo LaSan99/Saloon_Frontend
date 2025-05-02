@@ -56,11 +56,36 @@ const AdminDashboard = () => {
           <h2 className="text-2xl font-bold">Admin Panel</h2>
         </div>
         <nav className="mt-4">
-          <a href="#" className="block py-2 px-4 bg-gray-700">Dashboard</a>
-          <a href="/admin-bookings" className="block py-2 px-4 hover:bg-gray-700">Bookings</a>
-          <a href="/admin-services" className="block py-2 px-4 hover:bg-gray-700">Services</a>
-          <a href="/admin-users" className="block py-2 px-4 hover:bg-gray-700">Users</a>
-          <a href="/admin-contact" className="block py-2 px-4 hover:bg-gray-700">Contact</a>
+          <button 
+            onClick={() => navigate('/admin')} 
+            className="w-full text-left py-2 px-4 bg-gray-700 hover:bg-gray-600"
+          >
+            Dashboard
+          </button>
+          <button 
+            onClick={() => navigate('/admin-bookings')} 
+            className="w-full text-left py-2 px-4 hover:bg-gray-700"
+          >
+            Bookings
+          </button>
+          <button 
+            onClick={() => navigate('/admin-services')} 
+            className="w-full text-left py-2 px-4 hover:bg-gray-700"
+          >
+            Services
+          </button>
+          <button 
+            onClick={() => navigate('/admin-users')} 
+            className="w-full text-left py-2 px-4 hover:bg-gray-700"
+          >
+            Users
+          </button>
+          <button 
+            onClick={() => navigate('/admin-contact')} 
+            className="w-full text-left py-2 px-4 hover:bg-gray-700"
+          >
+            Contact
+          </button>
         </nav>
       </div>
 
