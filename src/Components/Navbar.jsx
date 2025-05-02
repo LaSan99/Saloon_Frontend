@@ -27,7 +27,8 @@ export const Navbar = () => {
       console.log('LocalStorage cleared');
       
       // Force a page reload and redirect
-      window.location.href = '/login';
+      // window.location.href = '/login';
+      navigate('/login');
     } catch (error) {
       console.error('Logout error:', error);
     }
