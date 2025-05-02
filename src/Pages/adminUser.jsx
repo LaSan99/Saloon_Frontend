@@ -23,7 +23,7 @@ const AdminUser = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/v1/users', {
+      const response = await fetch('https://saloon-bakcend.vercel.app/api/v1/users', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -58,8 +58,8 @@ const AdminUser = () => {
     e.preventDefault();
     try {
       const url = editingUser 
-        ? `http://localhost:3000/api/v1/users/${editingUser._id}`
-        : 'http://localhost:3000/api/v1/users';
+        ? `https://saloon-bakcend.vercel.app/api/v1/users/${editingUser._id}`
+        : 'https://saloon-bakcend.vercel.app/api/v1/users';
       
       const method = editingUser ? 'PUT' : 'POST';
       
@@ -104,7 +104,7 @@ const AdminUser = () => {
   const handleDelete = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/users/${userId}`, {
+        const response = await fetch(`https://saloon-bakcend.vercel.app/api/v1/users/${userId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`

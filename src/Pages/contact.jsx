@@ -26,7 +26,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/contact', formData);
+      const response = await axios.post('https://saloon-bakcend.vercel.app/api/v1/contact', formData);
       if (response.data.success) {
         toast.success('Message sent successfully!');
         setFormData({

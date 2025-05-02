@@ -32,7 +32,7 @@ const Register = () => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/api/v1/auth/register', {
+      const response = await fetch('https://saloon-bakcend.vercel.app/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

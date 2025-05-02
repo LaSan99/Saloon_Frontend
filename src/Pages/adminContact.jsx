@@ -14,7 +14,7 @@ const AdminContact = () => {
   // Fetch all contacts
   const fetchContacts = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/v1/contact');
+      const response = await axios.get('https://saloon-bakcend.vercel.app/api/v1/contact');
       setContacts(response.data.data);
       setLoading(false);
     } catch (error) {
@@ -31,7 +31,7 @@ const AdminContact = () => {
   // Update contact status
   const updateStatus = async (id, newStatus) => {
     try {
-      await axios.patch(`http://localhost:3000/api/v1/contact/${id}/status`, {
+      await axios.patch(`https://saloon-bakcend.vercel.app/api/v1/contact/${id}/status`, {
         status: newStatus
       });
       toast.success('Status updated successfully');
@@ -47,7 +47,7 @@ const AdminContact = () => {
     if (!window.confirm('Are you sure you want to delete this message?')) return;
 
     try {
-      await axios.delete(`http://localhost:3000/api/v1/contact/${id}`);
+      await axios.delete(`https://saloon-bakcend.vercel.app/api/v1/contact/${id}`);
       toast.success('Message deleted successfully');
       setSelectedContact(null);
       fetchContacts(); // Refresh the list

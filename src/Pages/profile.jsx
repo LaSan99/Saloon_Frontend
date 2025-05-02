@@ -31,13 +31,13 @@ const Profile = () => {
         }
 
         // Fetch user profile
-        const userResponse = await axios.get('http://localhost:3000/api/v1/users/me', {
+        const userResponse = await axios.get('https://saloon-bakcend.vercel.app/api/v1/users/me', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setUser(userResponse.data.data);
 
         // Fetch user's bookings
-        const bookingsResponse = await axios.get('http://localhost:3000/api/v1/appointments/my-appointments', {
+        const bookingsResponse = await axios.get('https://saloon-bakcend.vercel.app/api/v1/appointments/my-appointments', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setBookings(bookingsResponse.data.appointments);

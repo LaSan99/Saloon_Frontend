@@ -36,7 +36,7 @@ const AdminService = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/v1/services', {
+      const response = await fetch('https://saloon-bakcend.vercel.app/api/v1/services', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -108,8 +108,8 @@ const AdminService = () => {
 
     try {
       const url = editingService 
-        ? `http://localhost:3000/api/v1/services/${editingService._id}`
-        : 'http://localhost:3000/api/v1/services';
+        ? `https://saloon-bakcend.vercel.app/api/v1/services/${editingService._id}`
+        : 'https://saloon-bakcend.vercel.app/api/v1/services';
       
       const method = editingService ? 'PATCH' : 'POST';
       
@@ -166,7 +166,7 @@ const AdminService = () => {
   const handleDelete = async (serviceId) => {
     if (window.confirm('Are you sure you want to delete this service?')) {
       try {
-        const response = await fetch(`http://localhost:3000/api/v1/services/${serviceId}`, {
+        const response = await fetch(`https://saloon-bakcend.vercel.app/api/v1/services/${serviceId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`

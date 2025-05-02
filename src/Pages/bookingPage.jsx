@@ -54,7 +54,7 @@ const BookingPage = () => {
   useEffect(() => {
     const fetchService = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/services/${serviceId}`);
+        const response = await axios.get(`https://saloon-bakcend.vercel.app/api/v1/services/${serviceId}`);
         setService(response.data.service);
       } catch (err) {
         setError(err.response?.data?.message || 'Failed to fetch service details');
@@ -90,7 +90,7 @@ const BookingPage = () => {
       }
 
       const response = await axios.post(
-        'http://localhost:3000/api/v1/appointments',
+        'https://saloon-bakcend.vercel.app/api/v1/appointments',
         {
           service: serviceId,
           date: bookingData.date,

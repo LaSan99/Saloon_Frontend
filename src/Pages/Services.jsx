@@ -32,7 +32,7 @@ const Services = () => {
     const fetchServices = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/services"
+          "https://saloon-bakcend.vercel.app/api/v1/services"
         );
         const serviceData = response.data.services || response.data;
         setServices(Array.isArray(serviceData) ? serviceData : []);

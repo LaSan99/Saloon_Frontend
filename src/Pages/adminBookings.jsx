@@ -33,7 +33,7 @@ const AdminBookings = () => {
         return;
       }
 
-      const response = await fetch('http://localhost:3000/api/v1/appointments', {
+      const response = await fetch('https://saloon-bakcend.vercel.app/api/v1/appointments', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -68,7 +68,7 @@ const AdminBookings = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:3000/api/v1/appointments/${bookingId}`, {
+      const response = await fetch(`https://saloon-bakcend.vercel.app/api/v1/appointments/${bookingId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
