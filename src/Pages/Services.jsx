@@ -9,7 +9,7 @@ import {
   Divider,
   Chip
 } from "@mui/material";
-import ServiceCard from "../components/ServiceCard.jsx";
+import ServiceCard from "../Components/ServiceCard.jsx";
 import axios from "axios";
 
 const Services = () => {
